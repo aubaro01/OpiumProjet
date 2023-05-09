@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Big Shoulders Display", monospace;
+}
+
+body{
+   background-color: black;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+                                                      /*Header/ cabeçario*/
+.navBar{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+
+.logo{
+    font-size: 2rem;
+    font-family: monospace;
+    color:white;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.navLink{
+    transition: 0.5s ease;
+}
+
+.navLink:hover{
+   color:red;
+}
+
+.naV{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+@media(max-width:750px){
+    .naV{
+        display: block;
+    }
+    .naV.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .naV.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .naV.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap:0;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        flex-direction:column ;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .item_menu{
+        margin: 16px 0;
+    }
+    .item_menu.active{
+        left: 0;
+    }
+}
+
+                                                                                /*Fim */
+                                                                                
+.insta{
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.Twitter{
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.content{
+    height: 520px;
+    width: 935px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navega{
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    transform: translate(-75%);
+    display: flex;
+}
+
+.bare{
+    width: 70px;
+    border: 2px solid white;
+    height: 17px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.bare:hover{
+    background-color: white;
+
+}
+
+input{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide{
+   
+    width: 50px;
+    
+    transform: .4s;
+}
+
+#radio1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .s1{
+    margin-left: -50%;
+}
+
+#radio3:checked ~ .s1{
+    margin-left: -75%;
+}
+
+.social{
+    list-style: none ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+
+}
+
+.social li{
+    margin: 0 10px;
+}
+
+.social a{
+    text-decoration: none;
+    color: white;
+}
+.social a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+
+.social a:hover i{
+    color: red;
+
+
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center ;
+    flex-direction: column;
+    color: white;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    
+
+}
+ 
